@@ -1,0 +1,253 @@
+<!---->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css" />
+     <!-- Agregar Font Awesome para iconos -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo-principal">COFFE HUACO</h1>
+    </header>
+
+    <main>
+      <section class="seccion-menu">
+        <!-- y -->
+        <!--<h2 class="subtitulo">SECCIONES</h2>-->
+        <nav class="menu-horizontal">
+          <div class="item-menu">
+            <button class="btn-menu">Menú</button>
+            <div class="opciones-menu">
+              <a href="#">Opción 1.1</a>
+              <a href="#">Opción 1.2</a>
+              <a href="#">Opción 1.3</a>
+              <a href="#">Opción 1.4</a>
+            </div>
+          </div>
+
+          <div class="item-menu">
+            <button class="btn-menu">Sucursales</button>
+            <div class="opciones-menu">
+              <a href="#">Opción 2.1</a>
+              <a href="#">Opción 2.2</a>
+              <a href="#">Opción 2.3</a>
+              <a href="#">Opción 2.4</a>
+            </div>
+          </div>
+
+          <div class="item-menu">
+            <button class="btn-menu">Contacto</button>
+            <div class="opciones-menu">
+              <a href="#">Opción 3.1</a>
+              <a href="#">Opción 3.2</a>
+              <a href="#">Opción 3.3</a>
+              <a href="#">Opción 3.4</a> 
+            </div>
+          </div>
+
+          <div class="item-menu">
+            <button class="btn-menu">Feedback</button>
+            <div class="opciones-menu">
+              <a href="#">Opción 4.1</a>
+              <a href="#">Opción 4.2</a>
+              <a href="#">Opción 4.3</a>
+              <a href="#">Opción 4.4</a>
+            </div>
+          </div>
+
+          <div class="item-menu">
+            <button class="btn-menu">Sobre Nosotros</button>
+            <div class="opciones-menu">
+              <a href="#">Opción 5.1</a>
+              <a href="#">Opción 5.2</a>
+              <a href="#">Opción 5.3</a>
+              <a href="#">Opción 5.4</a>
+            </div>
+          </div
+        </nav>
+      </section>
+
+      <section class="seccion-contenido">
+        <div class="contenido-parrafo-imagen">
+          <div class="texto">
+            <h2>Primera Sección</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="imagen">
+            <img
+              src="Image/caffe1.jpg"
+              alt="Caffe HUACO 1"
+            />
+          </div>
+        </div>
+
+        <div class="contenido-imagen-parrafo">
+          <div class="imagen">
+            <img
+              src="Image/caffe2.jpg"
+              alt="Caffe HUACO 2"
+            />
+          </div>
+          <div class="texto">
+            <h2>Segunda Sección</h2>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion-video">
+        <h2>Video de YouTube</h2>
+        <div class="contenedor-video">
+          <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/0jIeCAOkgcQ?si=C6Gz6TCBDhAMhVab" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+        </div>
+      </section>
+      <!--SECCION FORMULARIO-->
+      <section class = "seccion-formulario">
+        <div class="div-cont-formulario">
+          <h2>Formulario de Registro</h2>
+          <p>Complete todos los campos</p>
+          <form class="form-contacto">
+            <!--INPUT/LABELS-->
+            <div class="campo">
+              <label for="nombre">Nombres Completos:</label>
+              <input type="text" id="nombre" name="nombre" placehorder="Ingrese sus nombres"/>
+            </div>
+            <!--LISTA DESPEGABLE-->
+            <div class="campo">
+              <label for="nombre">Pais:</label>
+              <select id="pais" name="pais">
+                <option value="">Seleccione un pais...</option>
+                <option value="Perú">Perú</option>
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Chile">Chile</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+              </select>
+            </div>
+            <!--CHECKBOX-->
+            <div class="campo">
+              <label>Gustos:</label>
+              <ul class="lista-checlbox">
+                <li><label><input type="checkbox" name="gustos" value="caliente">Caliente</label></li> 
+                <li><label><input type="checkbox" name="gustos" value="frio">Frio</label></li> 
+                <li><label><input type="checkbox" name="gustos" value="azucar">Azucar</label></li> 
+                <li><label><input type="checkbox" name="gustos" value="stevia">Stevia</label></li>
+                <li><label><input type="checkbox" name="gustos" value="chocolate">Chocolate</label></li>
+                <li><label><input type="checkbox" name="gustos" value="leche">Leche</label></li>
+                <li><label><input type="checkbox" name="gustos" value="cremadeleche">Crema de Leche</label></li>
+                <li><label><input type="checkbox" name="gustos" value="expresso">Expresso</label></li>
+              </ul>
+            </div>
+            <!--RADIO-->
+            <div class="campo">
+              <label>Sexo:</label>
+              <ul class="lista-radio">
+                <li><label><input type="radio" name="Sexo" value="masculino">Masculino</label></li>
+                <li><label><input type="radio" name="Sexo" value="femenino">Femenino</label></li>
+              </ul>
+            </div>
+            <a href="https://www.google.com">
+              <button class="submit">ENVIAR</button>
+            </a>
+          </form>
+        </div>
+      </section>
+    </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- Información de contacto -->
+          <div class="footer-section">
+              <h3>COFFE HUACO</h3>
+              <p>Tu lugar perfecto para disfrutar del mejor café artesanal en un ambiente acogedor.</p>
+              <div class="contact-info">
+                  <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                  <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                  <p><i class="fas fa-envelope"></i> info@coffehuaco.com</p>
+              </div>
+          </div>
+          
+          <!-- Enlaces rápidos -->
+          <div class="footer-section">
+              <h4>Enlaces Rápidos</h4>
+              <ul>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Menú</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Sucursales</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Sobre Nosotros</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+              </ul>
+          </div>
+          
+          <!-- Horarios -->
+          <div class="footer-section">
+              <h4>Horarios</h4>
+              <ul class="horarios">
+                  <li>Lunes - Viernes: <span>7:00 AM - 10:00 PM</span></li>
+                  <li>Sábados: <span>8:00 AM - 11:00 PM</span></li>
+                  <li>Domingos: <span>9:00 AM - 9:00 PM</span></li>
+              </ul>
+          </div>
+          
+          <!-- Redes sociales -->
+          <div class="footer-section">
+              <h4>Síguenos</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+              </div>
+              
+              <!-- Boletín informativo -->
+              <div class="newsletter">
+                  <h5>Suscríbete a nuestro boletín</h5>
+                  <form class="newsletter-form">
+                      <input type="email" placeholder="Tu correo electrónico" required>
+                      <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Línea divisoria -->
+      <div class="footer-divider"></div>
+      
+      <!-- Copyright y enlaces legales -->
+      <div class="footer-bottom">
+          <div class="footer-bottom-content">
+              <p>&copy; 2025 COFFE HUACO. Todos los derechos reservados.</p>
+              <div class="legal-links">
+                  <a href="#">Política de Privacidad</a>
+                  <a href="#">Términos y Condiciones</a>
+                  <a href="#">Aviso Legal</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
