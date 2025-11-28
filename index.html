@@ -177,7 +177,32 @@
           </form>
         </div>
       </section>
+       <!--LOGIN-->
+          <section class="login-container">
+        
+        <div class="login-box">
+            <h2>Acceso Restringido</h2>
+            
+            <form onsubmit="return validarLogin(event);">
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Clave de Acceso (ok)</label>
+                    <input type="password" id="password" name="password" placeholder="Introduce la clave secreta" required>
+                </div>
+                
+                <button type="submit" class="login-button">Iniciar Sesión</button>
+            </form>
+
+        </div> 
     </section>
+
+    <script src="login.js"></script>
+    
     </main>
     <footer class="footer">
       <div class="footer-container">
