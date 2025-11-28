@@ -577,3 +577,20 @@ main {
         padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
     }
 }
+
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.logout-btn:hover {
+    background: #ff3742;
+}
