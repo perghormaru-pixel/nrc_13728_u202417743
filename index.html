@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Huaco</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Acceso Restringido</h2>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Clave de Acceso</label>
+                    <input type="password" id="password" name="password" placeholder="Introduce la clave secreta" required>
+                </div>
+                
+                <button type="submit" class="login-button">Iniciar Sesión</button>
+            </form>
+
+            <div class="hint">Hint: La clave es "ok"</div>
+        </div> 
+    </section>
+
+    <script src="login.js"></script>
+</body>
+</html>
