@@ -1,35 +1,128 @@
 /* BOTÓN HAMBURGUESA (ESCONDE EN DESKTOP) */
 .menu-toggle {
-  display: none; /* Oculto por defecto */
-  font-size: 2rem; /* Tamaño del ícono hamburguesa */
-  background: none; /* Sin fondo */
-  border: none; /* Sin bordes */
-  cursor: pointer; /* Manito al pasar el mouse */
-  margin-right: 1rem; /* Espacio entre el borde derecho */
+    display: none; /* Oculto por defecto */
+    font-size: 1.8rem; /* Tamaño del ícono hamburguesa */
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Manito al pasar el mouse */
+    color: #333; /* Color del ícono */
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1001;
 }
 
 /* RESPONSIVE: MÓVILES */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Mostrar botón hamburguesa en móviles */
-    color: black;
-  }
+    .menu-toggle {
+        display: block; /* Mostrar botón hamburguesa en móviles */
+    }
 
-  .Menu-Horizontal {
-    display: none; /* Ocultar menú horizontal por defecto */
-    flex-direction: column; /* Mostrarlo en vertical al activarse */
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 5rem; /* Debajo del menú fijo */
-    left: 0;
-  }
+    .seccion-menu {
+        position: relative;
+    }
 
-  .Menu-Horizontal.active {
-    display: flex; /* Mostrar menú al activar la clase */
-  }
+    .menu-horizontal {
+        display: none; /* Ocultar menú horizontal por defecto */
+        flex-direction: column; /* Mostrarlo en vertical al activarse */
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 100%; /* Debajo del botón hamburguesa */
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        padding: 0;
+        margin: 0;
+        border-radius: 0 0 8px 8px;
+        overflow: hidden;
+    }
 
-  .Menu-Horizontal li {
-    border-bottom: 1px solid #ccc; /* Líneas separadoras */
-  }
+    .menu-horizontal.active {
+        display: flex; /* Mostrar menú al activar la clase */
+    }
+
+    .item-menu {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+    }
+
+    .item-menu:last-child {
+        border-bottom: none;
+    }
+
+    .btn-menu {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-menu::after {
+        content: "▼";
+        font-size: 0.8rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-menu.active::after {
+        transform: rotate(180deg);
+    }
+
+    .opciones-menu {
+        display: none;
+        background-color: #f8f9fa;
+        padding: 0;
+        width: 100%;
+    }
+
+    .opciones-menu.active {
+        display: block;
+    }
+
+    .opciones-menu a {
+        display: block;
+        padding: 0.8rem 2rem;
+        color: #555;
+        text-decoration: none;
+        border-bottom: 1px solid #e9ecef;
+        transition: background-color 0.3s ease;
+    }
+
+    .opciones-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .opciones-menu a:hover {
+        background-color: #e9ecef;
+    }
+
+    /* Ocultar los submenús en desktop cuando el menú hamburguesa está activo */
+    .item-menu:hover .opciones-menu {
+        display: none;
+    }
+
+    .item-menu:focus-within .opciones-menu {
+        display: block;
+    }
+}
+
+/* Estilos para desktop (mayor a 768px) */
+@media (min-width: 769px) {
+    .menu-horizontal {
+        display: flex !important; /* Forzar display flex en desktop */
+    }
+    
+    .menu-toggle {
+        display: none !important; /* Ocultar hamburguesa en desktop */
+    }
 }
